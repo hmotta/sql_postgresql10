@@ -28,7 +28,8 @@ select montoprestamo,tipoprestamoid,saldoprestamo, (case when dias_de_cobro > 0 
 
 select porcentaje into pporcentaje from cargoprestamo where tipoprestamoid = ptipoprestamoid and apertura=1 and tipocargo = 0 and fmontoprestamo > rangoinicial and fmontoprestamo < rangofinal;
 
-select substr(age(fecha_nacimiento),1,2) into nedad from sujeto su, socio s, prestamos p  where su.sujetoid=s.sujetoid and s.socioid=p.socioid and p.prestamoid=pprestamoid;
+select date_part('year', age(fecha_nacimiento)) into nedad from sujeto su, socio s, prestamos p  where su.sujetoid=s.sujetoid and s.socioid=p.socioid and p.prestamoid=pprestamoid;
+
 
 pporcentaje := coalesce(pporcentaje,0);
 
