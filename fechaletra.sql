@@ -16,40 +16,40 @@ begin
   pdia:=cast(date_part('day',pfecha) as char(2));
   pano:=cast(date_part('year',pfecha) as char(4));
 
-  if pmes=1 then
+  if pmes='1' then
     psmes := 'Enero     ';
   end if;
-  if pmes=2 then
+  if pmes='2' then
     psmes := 'Febrero   ';
   end if;
-  if pmes=3 then
+  if pmes='3' then
     psmes := 'Marzo     ';
   end if;
-  if pmes=4 then
+  if pmes='4' then
     psmes := 'Abril     ';
   end if;
-  if pmes=5 then
+  if pmes='5' then
     psmes := 'Mayo      ';
   end if;
-  if pmes=6 then
+  if pmes='6' then
     psmes := 'Junio     ';
   end if;
-  if pmes=7 then
+  if pmes='7' then
     psmes := 'Julio     ';
   end if;
-  if pmes=8 then
+  if pmes='8' then
     psmes := 'Agosto    ';
   end if;
-  if pmes=9 then
+  if pmes='9' then
     psmes := 'Septiembre';
   end if;
-  if pmes=10 then
+  if pmes='10' then
     psmes := 'Octubre   ';
   end if;
-  if pmes=11 then
+  if pmes='11' then
     psmes := 'Noviembre ';
   end if;
-  if pmes=12 then
+  if pmes='12' then
     psmes := 'Diciembre ';
   end if;
 
