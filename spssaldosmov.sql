@@ -7,8 +7,8 @@ declare
   pfechahora time without time zone;
 begin
 -->>Bitacora de Consultas
-	select * from now() into pfecha;
-	select * from substr(now(),11,12) into pfechahora;
+	select * from current_date into pfecha;
+	select * from current_time into pfechahora;
 		insert into bitacoraconsultasaldos(usuarioid, clavemodulo, descripcionmodulo, socioid, fecha, fechahora) values(SESSION_USER, '0602', 'Consulta de Saldos', psocioid, pfecha, pfechahora);
 --<<Bitacora de Consultas
     for r in
